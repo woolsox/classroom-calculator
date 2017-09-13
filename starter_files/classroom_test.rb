@@ -15,48 +15,48 @@ DATA = {
 }
 
 class ClassroomTest < Minitest::Test
-  def test_averages
-    assert_equal 91, averages(DATA)[:remy]
-    assert_equal 70, averages(DATA)[:dorian]
-  end
+  # def test_averages
+  #   assert_equal 91, averages(DATA)[:remy]
+  #   assert_equal 70, averages(DATA)[:dorian]
+  # end
 
   def test_assignment_score
     assert_equal 55, assignment_score(DATA, :ryan, 2)
     assert_equal 75, assignment_score(DATA, :indiana, 10)
   end
 
-  def test_assignment_scores
-    assert_equal [82, 84, 55, 58, 72, 92, 92, 74, 55, 96], assignment_scores(DATA, 2)
-    assert_equal [81, 60, 67, 82, 68, 60, 73, 89, 82, 95], assignment_scores(DATA, 9)
-  end
-
-  def test_assignment_average_score
-    assert_equal 80, assignment_average_score(DATA, 4)
-    assert_equal 75, assignment_average_score(DATA, 8)
-  end
-
-  def test_letter_grade
-    assert_equal "A", letter_grade(1000)
-    assert_equal "A", letter_grade(92)
-    assert_equal "B", letter_grade(84)
-    assert_equal "C", letter_grade(70)
-    assert_equal "D", letter_grade(69)
-    assert_equal "F", letter_grade(2)
-  end
-
-  def test_final_letter_grades
-    assert_equal "A", final_letter_grades(DATA)[:remy]
-    assert_equal "B", final_letter_grades(DATA)[:kelly]
-    assert_equal "B", final_letter_grades(DATA)[:indiana]
-    assert_equal "F", final_letter_grades(DATA)[:chase]
-  end
-
-  def test_class_average
-    assert_equal 74, class_average(DATA)
-  end
-
-  def test_top_students
-    assert_equal [:remy, :kelly, :indiana], top_students(DATA, 3)
-    assert_equal [:remy, :kelly, :indiana, :ryan, :riley, :allison, :nevada, :dorian, :drew, :chase], top_students(DATA, 10)
-  end
+  # def test_assignment_scores
+  #   assert_equal [82, 84, 55, 58, 72, 92, 92, 74, 55, 96], assignment_scores(DATA, 2)
+  #   assert_equal [81, 60, 67, 82, 68, 60, 73, 89, 82, 95], assignment_scores(DATA, 9)
+  # end
+  #
+  # def test_assignment_average_score
+  #   assert_equal 80, assignment_average_score(DATA, 4)
+  #   assert_equal 75, assignment_average_score(DATA, 8)
+  # end
+  #
+  # def test_letter_grade
+  #   assert_equal "A", letter_grade(1000)
+  #   assert_equal "A", letter_grade(92)
+  #   assert_equal "B", letter_grade(84)
+  #   assert_equal "C", letter_grade(70)
+  #   assert_equal "D", letter_grade(69)
+  #   assert_equal "F", letter_grade(2)
+  # end
+  #
+  # def test_final_letter_grades
+  #   assert_equal "A", final_letter_grades(DATA)[:remy]
+  #   assert_equal "B", final_letter_grades(DATA)[:kelly]
+  #   assert_equal "B", final_letter_grades(DATA)[:indiana]
+  #   assert_equal "F", final_letter_grades(DATA)[:chase]
+  # end
+  #
+  # def test_class_average
+  #   assert_equal 74, class_average(DATA)
+  # end
+  #
+  # def test_top_students
+  #   assert_equal [:remy, :kelly, :indiana], top_students(DATA, 3)
+  #   assert_equal [:remy, :kelly, :indiana, :ryan, :riley, :allison, :nevada, :dorian, :drew, :chase], top_students(DATA, 10)
+  # end
 end
