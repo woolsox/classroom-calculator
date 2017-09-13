@@ -2,12 +2,7 @@
 # for that student and assignment. Note that Ruby counts arrays from 0, but
 # we are referring to them as 1-10.
 def assignment_score(grade_hash, student, assignment_num)
-grade_hash.each do |student, assignments|
-  score = assignment_num - 1
-  puts student{assignments[score]}
-end
- # puts student
- # puts grade_hash
+  grade_hash[student][assignment_num-1]
 end
 
 # Given a grade_hash and assignment number, return all scores for that
